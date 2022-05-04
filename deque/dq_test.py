@@ -5,6 +5,7 @@ from dq import Deque, Node
 
 log = Logger("deque_test")
 
+
 class NodeTest(unittest.TestCase):
     def setUp(self) -> None:
         return super().setUp()
@@ -38,7 +39,7 @@ class NodeTest(unittest.TestCase):
         self.assertNotEqual(n1, n2)
         self.assertNotIsInstance(n1, n2)
         elapsed_time = time.perf_counter() - start_time
-        log(f"Completed multiple instance test in {elapsed_time:.5f}")        
+        log(f"Completed multiple instance test in {elapsed_time:.5f}")
 
     def test_two_linked_nodes(self):
         log("Started linked nodes test")
@@ -60,6 +61,7 @@ class NodeTest(unittest.TestCase):
         elapsed_time = time.perf_counter() - start_time
         log(f"Completed linked nodes test in {elapsed_time:.5f}")
 
+
 class DequeTest(unittest.TestCase):
     def setUp(self) -> None:
         return super().setUp()
@@ -68,6 +70,13 @@ class DequeTest(unittest.TestCase):
         log("Started deque existance test")
         start_time = time.perf_counter()
         dq = Deque()
-        self.assertIsNotNone(node)
         elapsed_time = time.perf_counter() - start_time
         log(f"Completed existance test in {elapsed_time:.5f}")
+
+    def test_object_has_default_props(self):
+        log()
+        start_time = time.perf_counter()
+        dq = Deque()
+        self.assertIsNot(dq.head)
+        self.assertEqual(dq.)
+        elapsed_time = time.perf_counter() - start_time

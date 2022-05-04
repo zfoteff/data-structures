@@ -4,15 +4,15 @@ from linked_list import *
 class TestLinkedListMethods(ut.TestCase):
 
     def test_correct_size (self):
-        list = LinkedList()
+        linked_list = LinkedList()
 
-        self.assertEqual(list.size(), 0)
+        self.assertEqual(linked_list.size(), 0)
 
-        list.insert_at_tail(1, 'a')
-        list.insert_at_tail(2, 'b')
-        list.insert_at_tail(3, 'c')
+        linked_list.insert_at_tail(1, 'a')
+        linked_list.insert_at_tail(2, 'b')
+        linked_list.insert_at_tail(3, 'c')
 
-        self.assertEqual(list.size(), 3)
+        self.assertEqual(linked_list.size(), 3)
 
     def test_insert (self):
         list = LinkedList()
